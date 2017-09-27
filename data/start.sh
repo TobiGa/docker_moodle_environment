@@ -51,8 +51,8 @@ if ! grunt --version | grep -q grunt-cli; then
   npm install npm@3.5.2 -g
   npm install -g grunt-cli
 
-  echo "run npm install in /var/www/html/mbsmoodle"  
-  cd /var/www/html/mbsmoodle
+  echo "run npm install in /var/www/html/moodle"  
+  cd /var/www/html/moodle
   npm install --only=dev
 fi
 
