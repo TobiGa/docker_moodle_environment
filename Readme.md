@@ -2,7 +2,7 @@
 Clone git repository
 with  --recurse-submodules to load moodle.git
 
-	git clone --recurse-submodules https://gitlab.mebis.alp.dillingen.de/tobias.garske/docker_environment.git foldernameAsDesired
+	git clone --recurse-submodules https://github.com/TobiGa/docker_moodle_environment.git foldernameAsDesired
 
 build docker image
 	
