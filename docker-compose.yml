@@ -1,0 +1,22 @@
+version: "3"
+services:
+  moodle:
+    # container_name: moodle_instance    
+    build: .
+    volumes:
+      - ./moodle:/var/www/html/moodle
+      - ./data/external:/external
+      - ./data/moodledata:/var/www/moodledata
+      - ./data/behat_moodledata:/var/www/behat_moodledata
+      - ./data/phpu_moodledata:/var/www/phpu_moodledata
+#	persist db
+      - db-data:/var/lib/mysql  
+    ports:
+      - "80:80"
+      - "443:443"
+      - "3306:3306"
+      - "4444:4444"
+    restart: on-failure
+#persist db
+volumes:
+  db-data:
