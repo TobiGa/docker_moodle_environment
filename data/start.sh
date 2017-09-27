@@ -39,22 +39,20 @@ if ! grep -q "phpmyadmin" /etc/apache2/apache2.conf ; then
   echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf
 fi  
 
-#if node is version 0.10 from first ubuntu install
-if node --version | grep -q 0.10.25; then
+#if grunt is not installed
+if ! grunt --version | grep -q grunt-cli; then
   echo "update node, install npm and grunt"  
 
   npm cache clean -f
   npm install -g n
   n stable
-
+  
   #install node dependencies and grunt
-  npm install npm@latest -g
-
-  npm install npm@latest -g
+  npm install npm@3.5.2 -g
   npm install -g grunt-cli
 
-  echo "run npm install in /var/www/html/moodle"  
-  cd /var/www/html/moodle
+  echo "run npm install in /var/www/html/mbsmoodle"  
+  cd /var/www/html/mbsmoodle
   npm install --only=dev
 fi
 
