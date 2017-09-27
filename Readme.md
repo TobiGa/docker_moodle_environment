@@ -14,7 +14,7 @@ run docker image
 
 
 
-## Adressen:
+## Urls:
 moodle:<br>
 http://localhost/moodle
 
