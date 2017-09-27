@@ -68,11 +68,6 @@ fi
 php /var/www/html/moodle/admin/cli/upgrade.php --non-interactive
 php /var/www/html/moodle/admin/tool/behat/cli/init.php
 
-#phpmyadmin apache.conf extension exists?
-if ! grep -q "phpmyadmin" /etc/apache2/apache2.conf ; then
-  #add phpadmin/apache.conf to apache.conf to make phpmyadmin work
-  echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf
-fi  
 #if process needs to be killed
 #pkill -9 -P 486
 
