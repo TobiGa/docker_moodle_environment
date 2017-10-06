@@ -36,7 +36,7 @@ RUN gem install bootstrap-sass
 RUN apt-get -y install vim curl git git-core
 
 #add to get composer / behat ro run
-RUN apt-get -y install php-gd libcurl3-dev php-curl php-xmlrpc php-intl php-mysql php-xml php-mbstring php-zip php-soap cron 
+RUN apt-get -y install php-gd libcurl3-dev php-curl php-xmlrpc php-intl php-mysql php-xml php-mbstring php-zip php-soap cron language-pack-en
 RUN apt-get -y install php-xdebug openjdk-8-jre-headless xvfb
 
 #install and delete firefox for dependencies
